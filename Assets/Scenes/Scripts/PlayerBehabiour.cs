@@ -33,6 +33,13 @@ public class PlayerBehabiour : MonoBehaviour
     //Reiniciar
     public bool volverPrincipio = false;
 
+    //tiempo
+    int segundosContar;
+    public float tiempoCambiar;
+    public float tiempoEspera;
+    public GameObject obstacle;
+    GameObject clon;
+
     void Start()
     {
         //salto
@@ -128,6 +135,13 @@ public class PlayerBehabiour : MonoBehaviour
             cubito.SetActive(!cubito.activeInHierarchy);
             reiniciar.SetActive(!reiniciar.activeInHierarchy);
             seVeEmp = true;
+            while (tiempoCambiar < Time.time && segundosContar > 0)
+            {
+                segundosContar--;
+                clon = Instantiate(obstacle);
+                Destroy(clon, 1);
+                tiempoCambiar += tiempoEspera;
+            }
 
         }
     }
