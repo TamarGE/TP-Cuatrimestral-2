@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerBehabiour : MonoBehaviour
 {
@@ -25,8 +26,12 @@ public class PlayerBehabiour : MonoBehaviour
     public GameObject cubito;
     public GameObject textoInicial;
     public GameObject botonSeguir;
+    public GameObject reiniciar;
     public bool seVeSig = true;
     public bool seVeEmp = false;
+
+    //Reiniciar
+    public bool volverPrincipio = false;
 
     void Start()
     {
@@ -121,10 +126,17 @@ public class PlayerBehabiour : MonoBehaviour
             Instrucciones.SetActive(!Instrucciones.activeInHierarchy);
             botonEmpezar.SetActive(!botonEmpezar.activeInHierarchy);
             cubito.SetActive(!cubito.activeInHierarchy);
+            reiniciar.SetActive(!reiniciar.activeInHierarchy);
             seVeEmp = true;
 
         }
     }
+    /*public void Reiniciar()
+    {
+        if ()
+        transform.position = posicionInicio;
+
+    }*/
 
 }
 
