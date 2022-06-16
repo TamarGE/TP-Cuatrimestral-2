@@ -19,6 +19,7 @@ public class PlayerBehabiour : MonoBehaviour
 
     //Muerte
     Vector3 posicionInicio;
+    public GameObject obst;
 
     //botones
     public GameObject botonEmpezar;
@@ -32,6 +33,9 @@ public class PlayerBehabiour : MonoBehaviour
 
     //Reiniciar
     public bool volverPrincipio = false;
+
+    //Ganar
+    public Text ganarTxt;
 
     //tiempo
     /*int segundosContar;
@@ -95,7 +99,7 @@ public class PlayerBehabiour : MonoBehaviour
         //Saltar:
         if (Input.GetKey(KeyCode.Space) && cubeEnElPiso)
         {
-            rb.AddForce(new Vector3(0, 7, 0), ForceMode.Impulse);
+            rb.AddForce(new Vector3(0, 6, 0), ForceMode.Impulse);
             cubeEnElPiso = false;
             fuenteSonidoSaltar.clip = sonidoSalto;
             fuenteSonidoSaltar.Play();
@@ -105,14 +109,20 @@ public class PlayerBehabiour : MonoBehaviour
     private void OnCollisionEnter(Collision col)
     {
         //saltar
-        if (col.gameObject.name == "Piso" || col.gameObject.name == "Plataforma")
+        if (col.gameObject.name == "Piso")
         {
             cubeEnElPiso = true;
         }
         //morir
-        if (col.gameObject.name == "PlanoCaida" || col.gameObject.name == "obstaculo")
+        if (col.gameObject.name == "PlanoCaida" || col.gameObject.name == "obstaculo(Clone)" || col.gameObject.name == "obstaculo2(Clone)" || col.gameObject.name == "obstaculo3")
         {
                 transform.position = posicionInicio;
+                ganarTxt.text = "¡Perdiste!";
+        }
+        //ganar
+        if (col.gameObject.name == "Llegada")
+        {
+            ganarTxt.text = "¡Ganaste!";
         }
     }
     public void VerSig()
