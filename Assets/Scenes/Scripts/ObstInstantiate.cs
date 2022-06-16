@@ -4,7 +4,22 @@ using UnityEngine;
 
 public class ObstInstantiate : MonoBehaviour
 {
-    int segundosContar;
+    public GameObject cubePrefab;
+    public float tiempoCambiar;
+    public float tiempoEspera;
+
+    void Update()
+    {
+        while (tiempoCambiar < Time.time)
+        {
+            GameObject inst = Instantiate(cubePrefab, transform.position, Quaternion.identity);
+            Destroy(inst, 1);
+            tiempoCambiar += tiempoEspera;
+        }
+    }
+}
+//(Input.GetButtonDown(buttonName:"Reiniciar"))
+/*int segundosContar;
 
     public float tiempoCambiar;
     public float tiempoEspera;
@@ -23,15 +38,14 @@ public class ObstInstantiate : MonoBehaviour
         {
             segundosContar--;
             clon = Instantiate(obstacle);
-            Destroy(clon, 1);
+            Destroy(clon,1);
             tiempoCambiar += tiempoEspera;
         }
     }
-    /*void OnCollisionEnter(Collision col)
+    void OnCollisionEnter(Collision col)
     {
         if (col.gameObject.name == "Piso")
         {
             Destroy(clon);
         }
     }*/
-}
