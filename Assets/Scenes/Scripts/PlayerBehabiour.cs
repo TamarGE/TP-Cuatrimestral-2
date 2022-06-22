@@ -27,15 +27,16 @@ public class PlayerBehabiour : MonoBehaviour
     public GameObject cubito;
     public GameObject textoInicial;
     public GameObject botonSeguir;
+    public GameObject pantalla;
     public GameObject reiniciar;
+    public GameObject confetti;
     public bool seVeSig = true;
     public bool seVeEmp = false;
 
     //Reiniciar
     public bool volverPrincipio = false;
-
-    //Ganar
     public Text ganarTxt;
+    public bool cubitoVer = true;
 
     //tiempo
     /*int segundosContar;
@@ -59,53 +60,55 @@ public class PlayerBehabiour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Movimiento:
-    if (Input.GetKey(KeyCode.D))
-    {
-        transform.Translate(0, 0, -movementSpeed);
-        if (cubeEnElPiso)
-        {
-            fuenteSonidoSlide.clip = sonidoSlide;
-            fuenteSonidoSlide.Play();
-        }
-    }
-    if (Input.GetKey(KeyCode.A))
-    {
-        transform.Translate(0, 0, movementSpeed);
-        if (cubeEnElPiso)
-        {
-            fuenteSonidoSlide.clip = sonidoSlide;
-            fuenteSonidoSlide.Play();
-        }
-    }
-    if (Input.GetKey(KeyCode.S))
-    {
-        transform.Translate(-movementSpeed, 0, 0);
-        if (cubeEnElPiso)
-        {
-            fuenteSonidoSlide.clip = sonidoSlide;
-            fuenteSonidoSlide.Play();
-        }
-    }
-    if (Input.GetKey(KeyCode.W))
-    {
-        transform.Translate(movementSpeed, 0, 0);
-        if (cubeEnElPiso)
-        {
-            fuenteSonidoSlide.clip = sonidoSlide;
-            fuenteSonidoSlide.Play();
-        }
-    }
-        //Saltar:
-        if (Input.GetKey(KeyCode.Space) && cubeEnElPiso)
-        {
-            rb.AddForce(new Vector3(0, 6, 0), ForceMode.Impulse);
-            cubeEnElPiso = false;
-            fuenteSonidoSaltar.clip = sonidoSalto;
-            fuenteSonidoSaltar.Play();
+            //Movimiento:
+            if (Input.GetKey(KeyCode.D))
+            {
+                transform.Translate(0, 0, -movementSpeed);
+                if (cubeEnElPiso)
+                {
+                    fuenteSonidoSlide.clip = sonidoSlide;
+                    fuenteSonidoSlide.Play();
+                }
+            }
+            if (Input.GetKey(KeyCode.A))
+            {
+                transform.Translate(0, 0, movementSpeed);
+                if (cubeEnElPiso)
+                {
+                    fuenteSonidoSlide.clip = sonidoSlide;
+                    fuenteSonidoSlide.Play();
+                }
+            }
+            if (Input.GetKey(KeyCode.S))
+            {
+                transform.Translate(-movementSpeed, 0, 0);
+                if (cubeEnElPiso)
+                {
+                    fuenteSonidoSlide.clip = sonidoSlide;
+                    fuenteSonidoSlide.Play();
+                }
+            }
+            if (Input.GetKey(KeyCode.W))
+            {
+                transform.Translate(movementSpeed, 0, 0);
+                if (cubeEnElPiso)
+                {
+                    fuenteSonidoSlide.clip = sonidoSlide;
+                    fuenteSonidoSlide.Play();
+                }
+            }
+            //Saltar:
+            if (Input.GetKey(KeyCode.Space) && cubeEnElPiso)
+            {
+                rb.AddForce(new Vector3(0, 6, 0), ForceMode.Impulse);
+                cubeEnElPiso = false;
+                fuenteSonidoSaltar.clip = sonidoSalto;
+                fuenteSonidoSaltar.Play();
 
-        }
+            }
+        
     }
+    public int b = 15;
     private void OnCollisionEnter(Collision col)
     {
         //saltar
@@ -116,13 +119,28 @@ public class PlayerBehabiour : MonoBehaviour
         //morir
         if (col.gameObject.name == "PlanoCaida" || col.gameObject.name == "obstaculo(Clone)" || col.gameObject.name == "obstaculo2(Clone)" || col.gameObject.name == "obstaculo3")
         {
-                transform.position = posicionInicio;
                 ganarTxt.text = "¡Perdiste!";
+            if (cubitoVer == true){
+                cubitoVer = false;
+            }
         }
         //ganar
         if (col.gameObject.name == "Llegada")
         {
             ganarTxt.text = "¡Ganaste!";
+            if (cubitoVer == true)
+            {
+                cubitoVer = false;
+            }
+                confetti.SetActive(true);
+                float a = 0.5f;
+                while (b > 0)
+                {
+                    confetti.transform.localScale = new Vector3(a, a, a);
+                    a -= 0.1f;
+                    b--;
+                    Instantiate(confetti);
+                }
         }
     }
     public void VerSig()
@@ -142,7 +160,7 @@ public class PlayerBehabiour : MonoBehaviour
         {
             Instrucciones.SetActive(!Instrucciones.activeInHierarchy);
             botonEmpezar.SetActive(!botonEmpezar.activeInHierarchy);
-            cubito.SetActive(!cubito.activeInHierarchy);
+            pantalla.SetActive(!pantalla.activeInHierarchy);
             reiniciar.SetActive(!reiniciar.activeInHierarchy);
             seVeEmp = true;
             /*while (tiempoCambiar < Time.time && segundosContar > 0)
@@ -155,11 +173,33 @@ public class PlayerBehabiour : MonoBehaviour
 
         }
     }
-    /*public void Reiniciar()
+    public void Reiniciar()
     {
-        if ()
-        transform.position = posicionInicio;
-
+        if (ganarTxt.text == "¡Ganaste!" || ganarTxt.text == "¡Perdiste!" || ganarTxt.text == "")
+        {
+            if (cubitoVer == false)
+            {
+                cubitoVer = true;
+            }
+            transform.position = posicionInicio;
+            ganarTxt.text = "";
+        }
+    }
+    /*
+    public void Confetti (GameObject confetti)
+    {
+        if (ganarTxt.text == "¡Ganaste!")
+        {
+            confetti.SetActive(!confetti.activeInHierarchy);
+            float a = 0.5f;
+            while (i > 0)
+            {
+                confetti.transform.localScale = new Vector3(a, a, a);
+                a -= 0.1f;
+                i--;
+                Instantiate(confetti);
+            }
+        }
     }*/
 
 }
