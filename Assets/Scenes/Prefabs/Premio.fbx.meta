@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0ea76556a0e829347bacac89d164bc0f
+guid: c33423ad7d73b99458e80b2dba334fe9
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -8,18 +8,8 @@ ModelImporter:
     2100000: PaletaColores
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Valla
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: PaletaColores
-    second: {fileID: 2100000, guid: 3f93045074950b8478c21b97e43b1586, type: 2}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: paleta de colores
-    second: {fileID: 2800000, guid: 0754c1ff2df79aa49a877a838b8f9aa0, type: 3}
+    4300000: Premio
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0

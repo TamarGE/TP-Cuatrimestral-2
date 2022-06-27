@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 054d785a981254349a1b1d0c9319278d
+guid: ae2442e5d30ea9847a8ed19eab263c01
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -8,7 +8,7 @@ ModelImporter:
     2100000: PaletaColores
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Regadera
+    4300000: Valla
   externalObjects: {}
   materials:
     importMaterials: 1
