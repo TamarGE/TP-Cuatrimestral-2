@@ -24,7 +24,6 @@ public class PlayerBehabiour : MonoBehaviour
     //botones
     public GameObject botonEmpezar;
     public GameObject Instrucciones;
-    public GameObject cubito;
     public GameObject textoInicial;
     public GameObject botonSeguir;
     public GameObject pantalla;
