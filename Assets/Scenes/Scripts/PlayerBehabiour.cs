@@ -121,11 +121,13 @@ public class PlayerBehabiour : MonoBehaviour
                 ganarTxt.text = "¡Perdiste!";
             if (cubitoVer == true){
                 cubitoVer = false;
+                pantalla.SetActive(!pantalla.activeInHierarchy);
             }
         }
         //ganar
         if (col.gameObject.name == "Llegada")
         {
+            
             ganarTxt.text = "¡Ganaste!";
             if (cubitoVer == true)
             {
@@ -162,13 +164,6 @@ public class PlayerBehabiour : MonoBehaviour
             pantalla.SetActive(!pantalla.activeInHierarchy);
             reiniciar.SetActive(!reiniciar.activeInHierarchy);
             seVeEmp = true;
-            /*while (tiempoCambiar < Time.time && segundosContar > 0)
-            {
-                segundosContar--;
-                clon = Instantiate(obstacle);
-                Destroy(clon, 1);
-                tiempoCambiar += tiempoEspera;
-            }*/
 
         }
     }
@@ -179,7 +174,9 @@ public class PlayerBehabiour : MonoBehaviour
             if (cubitoVer == false)
             {
                 cubitoVer = true;
+                pantalla.SetActive(!pantalla.activeInHierarchy);
             }
+            
             transform.position = posicionInicio;
             ganarTxt.text = "";
         }
