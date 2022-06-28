@@ -1000,7 +1000,7 @@ PrefabInstance:
     - target: {fileID: 6262298430266758915, guid: 119e310635ce8e14ab644fa474734030,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 46.972
+      value: 46.88
       objectReference: {fileID: 0}
     - target: {fileID: 6262298430266758915, guid: 119e310635ce8e14ab644fa474734030,
         type: 3}
@@ -1010,7 +1010,7 @@ PrefabInstance:
     - target: {fileID: 6262298430266758915, guid: 119e310635ce8e14ab644fa474734030,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.23011994
+      value: -1.1
       objectReference: {fileID: 0}
     - target: {fileID: 6262298430266758915, guid: 119e310635ce8e14ab644fa474734030,
         type: 3}
@@ -1061,6 +1061,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: obstaculo3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6262298430267116323, guid: 119e310635ce8e14ab644fa474734030,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 119e310635ce8e14ab644fa474734030, type: 3}
@@ -1608,7 +1613,7 @@ PrefabInstance:
     - target: {fileID: 6262298430266758915, guid: 119e310635ce8e14ab644fa474734030,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 47.944
+      value: 47.19
       objectReference: {fileID: 0}
     - target: {fileID: 6262298430266758915, guid: 119e310635ce8e14ab644fa474734030,
         type: 3}
@@ -1669,6 +1674,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: obstaculo3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6262298430267116323, guid: 119e310635ce8e14ab644fa474734030,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 119e310635ce8e14ab644fa474734030, type: 3}
@@ -2371,6 +2381,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: obstaculo3
       objectReference: {fileID: 0}
+    - target: {fileID: 6262298430267116323, guid: 119e310635ce8e14ab644fa474734030,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 119e310635ce8e14ab644fa474734030, type: 3}
 --- !u!4 &606322377 stripped
@@ -2515,6 +2530,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: obstaculo3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6634099333354218361, guid: 394f7cede495ce6428e12af16b982b8f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6634099333354258265, guid: 394f7cede495ce6428e12af16b982b8f,
         type: 3}
@@ -3274,6 +3294,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: obstaculo3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6262298430267116323, guid: 119e310635ce8e14ab644fa474734030,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 119e310635ce8e14ab644fa474734030, type: 3}
@@ -4578,7 +4603,7 @@ PrefabInstance:
     - target: {fileID: 6262298430266758915, guid: 119e310635ce8e14ab644fa474734030,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 48.525997
+      value: 47.89
       objectReference: {fileID: 0}
     - target: {fileID: 6262298430266758915, guid: 119e310635ce8e14ab644fa474734030,
         type: 3}
@@ -4588,7 +4613,7 @@ PrefabInstance:
     - target: {fileID: 6262298430266758915, guid: 119e310635ce8e14ab644fa474734030,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.23011994
+      value: 0.29
       objectReference: {fileID: 0}
     - target: {fileID: 6262298430266758915, guid: 119e310635ce8e14ab644fa474734030,
         type: 3}
@@ -4639,6 +4664,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: obstaculo3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6262298430267116323, guid: 119e310635ce8e14ab644fa474734030,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 119e310635ce8e14ab644fa474734030, type: 3}
@@ -6676,6 +6706,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: obstaculo3
       objectReference: {fileID: 0}
+    - target: {fileID: 6551028596345445129, guid: 8bba128b924f50b45abbb43fa2ac5fca,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6551028596345866025, guid: 8bba128b924f50b45abbb43fa2ac5fca,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6907,7 +6942,7 @@ PrefabInstance:
     - target: {fileID: 6634099333354218361, guid: 394f7cede495ce6428e12af16b982b8f,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6634099333354258265, guid: 394f7cede495ce6428e12af16b982b8f,
         type: 3}
@@ -6982,12 +7017,12 @@ PrefabInstance:
     - target: {fileID: 5179784338297879673, guid: 73f5e2e7fd11ef241a75c3d85f9fc9e0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 42.483276
+      value: 42.41
       objectReference: {fileID: 0}
     - target: {fileID: 5179784338297879673, guid: 73f5e2e7fd11ef241a75c3d85f9fc9e0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.03318596
+      value: -0.27
       objectReference: {fileID: 0}
     - target: {fileID: 5179784338297879673, guid: 73f5e2e7fd11ef241a75c3d85f9fc9e0,
         type: 3}
@@ -7038,6 +7073,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: obstaculo3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5179784338298363993, guid: 73f5e2e7fd11ef241a75c3d85f9fc9e0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73f5e2e7fd11ef241a75c3d85f9fc9e0, type: 3}
@@ -7113,6 +7153,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: obstaculo3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6262298430267116323, guid: 119e310635ce8e14ab644fa474734030,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 119e310635ce8e14ab644fa474734030, type: 3}

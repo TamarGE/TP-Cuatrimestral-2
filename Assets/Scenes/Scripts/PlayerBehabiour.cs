@@ -129,10 +129,6 @@ public class PlayerBehabiour : MonoBehaviour
         {
             
             ganarTxt.text = "¡Ganaste!";
-            if (cubitoVer == true)
-            {
-                cubitoVer = false;
-            }
                 confetti.SetActive(true);
                 float a = 0.5f;
                 while (b > 0)
@@ -140,8 +136,10 @@ public class PlayerBehabiour : MonoBehaviour
                     confetti.transform.localScale = new Vector3(a, a, a);
                     a -= 0.1f;
                     b--;
-                    Instantiate(confetti);
-                }
+                    GameObject clon = Instantiate(confetti);
+                    Destroy(clon, 2);
+                    Destroy(confetti, 1);
+            }
         }
     }
     public void VerSig()
